@@ -2,7 +2,7 @@
 ############ PROVIDER BLOCK ############
 provider "aws" {
   region     = "ap-south-1"
-  profile    = "default"
+  
 }
 ############ SAVING TF STATE FILE #########
 
@@ -31,3 +31,4 @@ resource "aws_instance" "web" {
     Name = "terraform_new_feature"
   }
 }
+
