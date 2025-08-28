@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "frontend" {
-  ami = "ami-02d26659fd82cf299"
+  ami = "ami-0f918f7e67a3323f0"
   instance_type = "t2.micro"
   key_name = "demo_key_pair"
 
@@ -15,4 +15,5 @@ resource "aws_instance" "frontend" {
 
   }
 }
+
 
