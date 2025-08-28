@@ -10,6 +10,8 @@ resource "aws_instance" "frontend" {
   key_name = "demo_key_pair"
 
   tags = {
+
     Name = "MyEC2Instance2"
+
   }
 }
