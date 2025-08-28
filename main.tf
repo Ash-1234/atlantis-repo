@@ -11,7 +11,8 @@ resource "aws_instance" "frontend" {
 
   tags = {
 
-    Name = "MyEC2Instance2"
+    Name = "MyEC2Instance3"
 
   }
 }
+
