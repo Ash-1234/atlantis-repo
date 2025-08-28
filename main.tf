@@ -1,34 +1,15 @@
-
-############ PROVIDER BLOCK ############
 provider "aws" {
-  region     = "ap-south-1"
-  
-}
-############ SAVING TF STATE FILE #########
-
-################# EC2 INSTANCE CREATION #########
-data "aws_ami" "ubuntu" {
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-
-  owners = ["099720109477"]
+  region     = ""
+  access_key = ""
+  secret_key = ""
 }
 
-resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
+resource "aws_instance" "frontend" {
+  ami = "ami-02d26659fd82cf299"
   instance_type = "t2.micro"
+  key_name = "demo_key_pair"
 
   tags = {
-    Name = "terraform_new_feature"
+    Name = "MyEC2Instance2"
   }
 }
-
